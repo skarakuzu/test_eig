@@ -2,7 +2,7 @@
 authors = ["skarakuzu <karakuzu.seher@gmail.com>"]
 channels = ["conda-forge"]
 name = "example"
-platforms = ["osx-64"]
+platforms = ["osx-64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
