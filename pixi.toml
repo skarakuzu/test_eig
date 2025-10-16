@@ -1,0 +1,18 @@
+[workspace]
+authors = ["skarakuzu <karakuzu.seher@gmail.com>"]
+channels = ["conda-forge"]
+name = "example"
+platforms = ["osx-64"]
+version = "0.1.0"
+
+[tasks]
+convert = "python convert.py" 
+solve_cpu = "mpiexec -n 8 python solve.py"
+solve_gpu = "mpiexec -n 8 python solve.py -mat_type aijcusparse -vec_type cuda"
+
+[dependencies]
+numpy = ">=2.3.3,<3"
+scipy = ">=1.16.2,<2"
+petsc4py = ">=3.24.0,<4"
+python = ">=3.14.0,<3.15"
+slepc4py = ">=3.24.0,<4"
